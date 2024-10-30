@@ -1,0 +1,56 @@
+MDScreen:
+    md_bg_color: self.theme_cls.backgroundColor
+
+    MDExpansionPanel:
+        id: panel
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDExpansionPanelHeader:
+
+            MDListItem:
+                theme_bg_color: "Custom"
+                md_bg_color: self.theme_cls.surfaceContainerLowColor
+                ripple_effect: False
+
+                MDListItemSupportingText:
+                    text: "Supporting text"
+
+                TrailingPressedIconButton:
+                    id: chevron
+                    icon: "chevron-right"
+                    on_release: app.tap_expansion_chevron(panel, chevron)
+
+        MDExpansionPanelContent:
+            orientation: "vertical"
+            padding: "12dp", 0, "12dp", 0
+
+            MDLabel:
+                text: "Channel information"
+                adaptive_height: True
+                padding_x: "16dp"
+                padding_y: "12dp"
+
+            MDListItem:
+
+                MDListItemLeadingIcon:
+                    icon: "email"
+
+                MDListItemHeadlineText:
+                    text: "Email"
+
+                MDListItemSupportingText:
+                    text: "kivydevelopment@gmail.com"
+
+            MDListItem:
+
+                MDListItemLeadingIcon:
+                    icon: "instagram"
+
+                MDListItemHeadlineText:
+                    text: "Instagram"
+
+                MDListItemSupportingText:
+                    text: "Account"
+
+                MDListItemTertiaryText:
+                    text: "www.instagram.com/KivyMD"
